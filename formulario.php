@@ -74,11 +74,31 @@
                     <td> <?php echo $user;  ?>  </td>
                     <td> <?php echo $password; ?>  </td>
                     <td> <?php echo $email;  ?>  </td>
-                    <td> <a href="formulario.php?update =<?php echo $id; ?>"> Update</a> </td>
-                    <td> <a href="formulario.php?delete =<?php echo $id; ?>"> Delete </a> </td>
+                    <td> <a href="formulario.php?update=<?php echo $id; ?>"> Update</a> </td>
+                    <td> <a href="formulario.php?delete=<?php echo $id; ?>"> Delete </a> </td>
                     
                 </tr>
                 <?php } ?>
             </table>
+
+            <?php
+                if(isset($_GET['update'])){
+                    include("update.php");
+                }
+            ?>
+            <?php
+                if(isset($_GET['delete'])){
+                    $delete_id = $_GET['delete'];
+
+                    $delete = "DELETE FROM users WHERE id = '$delete_id'";
+
+                    $execute = mysqli_query($con, $delete);
+
+                    if($execute){
+                        echo "<script>alert('Datos eliminados ')</script>";
+                        echo "<script>window.open('formulario.php','_self')</script>";
+                    }
+                }
+            ?>
         </body>
     </html>
