@@ -52,6 +52,12 @@
           //Llamando strings.php para ejemplo de strings
           include ("strings.php");
 
+          //Llamando operadores.php para ejemplo de strings
+          include ("operadores.php");
+
+          //Llamando operadores.php para ejemplo de strings
+          include ("constantes.php");
+
 
 
     ?>
