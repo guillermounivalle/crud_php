@@ -61,6 +61,13 @@
           //Llamando operadores.php para ejemplo de strings
           include ("operaciones.php");
 
+          //Llamando operadores.php para ejemplo de strings
+          include ("mathfunctions.php");
+
+          //Llamando operadores.php para ejemplo de strings
+          include ("parametros.php");
+
+
 
 
     ?>
