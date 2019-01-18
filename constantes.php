@@ -24,4 +24,5 @@
 
      echo "Constante __FILE__: <br>La constante __FILE__ muestra el archivo donde se está llamado -->  ".__FILE__;
 
+     
 ?>

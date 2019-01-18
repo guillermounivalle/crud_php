@@ -67,6 +67,9 @@
           //Llamando operadores.php para ejemplo de strings
           include ("parametros.php");
 
+          //Llamando operadores.php para ejemplo de strings
+          include ("database.php");
+
 
 
 
