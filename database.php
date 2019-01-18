@@ -32,7 +32,7 @@
      // CONSULTANDO A LA BASE DE DATOS
      $query="SELECT * FROM USERDATA";
 
-     //eJECUNTANDO LA CONSULTA
+     //EJECUNTANDO LA CONSULTA
      $result = mysqli_query($db_connect, $query);
      
      //VARIABLE QUE MOSTRARÁ LA INFORMACIÓN
@@ -45,7 +45,7 @@
             echo "<table width='50%'  align='center' border='1'><tr><td>";
             for($i = 0; $i < count($file); $i++){
                 if($i == (count($file))-1){
-                    echo $file[$i]."</td><td></tr></yable> " ;
+                    echo $file[$i]."</td><td></tr></table> " ;
                 }else{
                     echo $file[$i]."</td><td> " ;
                 }
@@ -56,9 +56,12 @@
         
        
         return $result;
+        mysql_close();
     }
     echo "Información obtenida de la base de datos <br>"; 
     imprimir();
+
+    
 
 
 ?>
