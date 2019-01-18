@@ -2,9 +2,11 @@
     <meta charset="utf-8" />
     <!-- Bloque de código php    -->
     <?php
+        // Valores para conectarse a la base de datos se encuentran en el archivo "varconexiondb.php"
+        require("varconexiondb.php");
         //$ se usa para llamar variables, ej: variable connect ==> $con
         //                        servidor,   usuario, contraseña, nombre BD 
-        $con = mysqli_connect("localhost", "root","","mycrudphp") or die("Error en la conexion");
+        $con = mysqli_connect($db_host, $db_user, $db_password, $db_databasename1) or die("Error en la conexion");
     ?>
 
     <html>
