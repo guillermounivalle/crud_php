@@ -70,6 +70,25 @@
           //Llamando operadores.php para ejemplo de strings
           include ("database.php");
 
+          //Llamando operadores.php para ejemplo de strings
+          include ("databasePOO.php");
+
+          require "obtenerdatos.php";
+          $data = new obtenerdatos();
+
+          $arraydata = $data->get_data();
+          echo "<br> Obteniendo datos por medio de PDO <br>";
+          foreach($arraydata as $element){
+              echo "<table width='50%'  align='center' border='1'><tr><td>";
+              echo $element['NIF']."</td><td>";
+              echo $element['NAME']."</td><td>";
+              echo $element['LASTNAME']."</td><td>";
+              echo $element['AGE']."</td><td></tr></table>";
+
+              echo "<br>";
+              echo "<br>";
+          }
+
 
 
 
